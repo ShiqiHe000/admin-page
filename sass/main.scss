@@ -1,0 +1,191 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "./pages.scss";
+@import "./login.scss";
+
+:root {
+    --accent-white: #f2f2f2;
+    --accent-black: #283040;
+    --accent-green: #4ebf6b;
+    --accent-blue-light: #448ff2;
+    --accent-blue-dark: #2d3773;
+    --nav-inactive: #bfbfbf;
+    --nav-active: white;
+
+    --main-font: "Fira Sans", sans-serif;
+}
+
+body {
+    background-color: var(--accent-white);
+    font-family: var(--main-font);
+    min-height: 100vh;
+    position: relative;
+}
+
+// navbar ----------------------------------
+.admin-style {
+    font-family: "Original Surfer", cursive;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar.navbar-customize {
+    background: var(--accent-blue-dark);
+}
+
+.navbar-nav {
+    .nav-item {
+        .nav-link:hover {
+            color: var(--nav-active);
+        }
+    }
+}
+
+// align items vertically, and evenly horizontally
+.nav-bar-right-side {
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.chat-icon {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    border: 1px solid var(--nav-inactive);
+}
+
+.thumbnail:hover {
+    border: 1px solid var(--nav-active);
+}
+.message-btn {
+    padding: 0;
+}
+
+.btn .badge.message-badge {
+    padding: 0.3rem;
+    top: 30%;
+    left: 80%;
+}
+// -----------------------------------------------
+
+// dropdown-------------------------------------------
+.dropdown-menu-dark {
+    background-color: var(--accent-blue-dark);
+}
+
+//-----------------------------------------------------
+
+// breadcrumb ---------------------------------------
+.breadcrumb-nav {
+    --bs-breadcrumb-divider: ">";
+}
+
+.breadcrumb-cus {
+    margin: 1rem 0;
+    padding: 0.2rem 1rem;
+    background-color: var(--accent-blue-light);
+    color: var(--nav-inactive);
+    border-radius: 100vw;
+
+    .breadcrumb-item::before {
+        color: var(--nav-inactive);
+    }
+
+    li.active {
+        color: var(--nav-active);
+    }
+
+    a.breadcrumb-link {
+        text-decoration: none;
+        color: inherit;
+        transform: scale(1);
+        transition: transform 150ms ease-in-out;
+        display: inline-block;  // make the scale works
+    }
+
+    .breadcrumb-link:hover {
+        transform: scale(1.05);
+    }
+}
+// ------------------------------------------
+
+// list group (left panel)--------------------------------------
+.list-group {
+    .list-group-item-cus {
+        display: flex;
+    }
+
+    .list-group-item.active {
+        background-color: var(--accent-blue-dark);
+    }
+
+    .list-group-icon-cus {
+        margin-right: 0.5em;
+    }
+
+    .badge.badge-cus {
+        background-color: var(--accent-blue-light);
+        margin-left: auto; // push to the right
+    }
+}
+// -----------------------------------------------------
+
+// progress bar ----------------------------------
+.progress {
+    .progress-bar-cus {
+        background-color: var(--accent-green);
+    }
+}
+// -------------------------------------------------
+
+// wibside overview, cards---------------------------
+.card-border {
+    border-radius: 1rem;
+}
+
+.overview-grid-gap {
+    row-gap: 0.5rem;
+}
+
+.new-post-button {
+    color: var(--accent-green);
+    border-color: var(--accent-green);
+
+    &:hover {
+        background-color: var(--accent-green);
+        color: white;
+        border-color: var(--accent-green);
+    }
+}
+// ----------------------------------------------
+
+// latest users--------------------------------
+.latest-user-container {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+//--------------------------------------------
+
+.main-area {
+    padding-bottom: 4rem;
+}
+
+// footer --------------------------------------
+.main-footer {
+    display: flex;
+    justify-content: flex-end;
+    color: gray;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-blue-dark);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    p {
+        padding: 0;
+        margin: 0;
+    }
+}
+//----------------------------------------------
